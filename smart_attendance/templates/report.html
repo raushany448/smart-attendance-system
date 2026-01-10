@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/static/style.css">
+<div class="container">
+<h2>Attendance Report</h2>
+<form method="post">
+<input name="subject" placeholder="Subject" required>
+<input type="date" name="date" required>
+<button>View Report</button>
+</form>
+
+{% if attendance %}
+<table>
+<tr><th>Student ID</th><th>Name</th><th>Status</th></tr>
+{% for s in students %}
+<tr>
+<td>{{s[0]}}</td>
+<td>{{s[1]}}</td>
+<td class="{{'present' if attendance[s[0]]=='Present' else 'absent'}}">
+{{attendance[s[0]]}}
+</td>
+</tr>
+{% endfor %}
+</table>
+{% endif %}
+
+<a href="/dashboard">⬅ Back</a>
+</div>

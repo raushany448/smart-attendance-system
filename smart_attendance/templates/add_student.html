@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/static/style.css">
+<div class="container">
+<h2>Add Student</h2>
+<form method="post">
+<input name="student_id" placeholder="Student ID" required>
+<input name="student_name" placeholder="Student Name" required>
+<button>Add Student</button>
+</form>
+
+<h3>Student List</h3>
+<table>
+<tr><th>ID</th><th>Name</th><th>Action</th></tr>
+{% for s in students %}
+<tr>
+<td>{{s[1]}}</td>
+<td>{{s[2]}}</td>
+<td><a href="/delete/{{s[0]}}">❌</a></td>
+</tr>
+{% endfor %}
+</table>
+<a href="/dashboard">⬅ Back</a>
+</div>

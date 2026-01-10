@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/static/style.css">
+<div class="container">
+<h2>Generate Attendance QR</h2>
+<form method="post">
+<input name="subject" placeholder="Subject Name" required>
+<button>Generate QR</button>
+</form>
+
+{% if qr %}
+<img src="/static/qr/{{qr}}" width="200">
+<p style="color:red">QR valid for 1 minute</p>
+{% endif %}
+
+<a href="/dashboard">⬅ Back</a>
+</div>
