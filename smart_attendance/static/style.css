@@ -1,0 +1,105 @@
+/* ---------------- Basic Body ---------------- */
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg,#4facfe,#00f2fe);
+    margin:0;
+    padding:0;
+}
+
+/* ---------------- Container ---------------- */
+.container{
+    width:90%;
+    max-width:400px;
+    background:#fff;
+    margin:60px auto;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ---------------- Headings ---------------- */
+h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* ---------------- Inputs, Selects, Buttons ---------------- */
+input, select, button{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border-radius:5px;
+    border:1px solid #ccc;
+    box-sizing:border-box;
+}
+
+/* ---------------- Buttons ---------------- */
+button{
+    background:#007bff;
+    color:white;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+}
+button:hover{
+    background:#0056b3;
+}
+
+/* ---------------- Links ---------------- */
+a{
+    text-decoration:none;
+    color:#007bff;
+}
+
+/* ---------------- Tables ---------------- */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+th, td{
+    padding:8px;
+    border:1px solid #ccc;
+    text-align:center;
+}
+th{
+    background:#007bff;
+    color:white;
+}
+
+/* ---------------- Attendance Status ---------------- */
+.present{
+    color:green;
+    font-weight:bold;
+}
+.absent{
+    color:red;
+    font-weight:bold;
+}
+
+/* ---------------- QR Image ---------------- */
+.qr{
+    display:block;
+    margin:auto;
+}
+
+/* ---------------- Success Message ---------------- */
+.success{
+    color:green;
+    text-align:center;
+    font-weight:bold;
+    font-size:18px;
+    margin-top:20px;
+}
+
+/* ---------------- Optional Styling ---------------- */
+form p{
+    text-align:center;
+    margin:10px 0;
+    font-weight:bold;
+    color:#555;
+}
+label{
+    display:block;
+    margin:5px 0;
+}

@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/static/style.css">
+<div class="container">
+<h2>Generate Attendance QR</h2>
+<form method="post">
+<select name="subject_dropdown">
+<option value="">--Select Subject--</option>
+{% for sub in subjects %}
+<option value="{{ sub }}">{{ sub }}</option>
+{% endfor %}
+</select>
+<p style="text-align:center;">OR</p>
+<input type="text" name="subject_text" placeholder="Type new subject">
+<button>Generate QR</button>
+</form>
+
+{% if qr %}
+<img src="/static/qr/{{qr}}" width="200" class="qr">
+<p style="color:red;text-align:center;">QR valid for 1 minute</p>
+{% endif %}
+
+<a href="{% if 'admin' in session %}/dashboard{% else %}/teacher_dashboard{% endif %}">⬅ Back</a>
+</div>

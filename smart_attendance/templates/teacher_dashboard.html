@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="/static/style.css">
+<div class="container">
+<h2>Teacher Dashboard</h2>
+{% if can_generate_qr %}
+<a href="/generate_qr"><button>Generate QR</button></a>
+{% endif %}
+{% if can_view_report %}
+<a href="/report"><button>View Attendance Report</button></a>
+{% endif %}
+<a href="/teacher_logout"><button style="background:red">Logout</button></a>
+</div>

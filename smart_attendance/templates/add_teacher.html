@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/static/style.css">
+<div class="container">
+<h2>Add Teacher</h2>
+<form method="post">
+<input name="teacher_name" placeholder="Teacher Name" required>
+<input name="username" placeholder="Username" required>
+<input name="password" type="password" placeholder="Password" required>
+<label><input type="checkbox" name="can_generate_qr" checked> Can Generate QR</label>
+<label><input type="checkbox" name="can_view_report" checked> Can View Report</label>
+<button>Add Teacher</button>
+</form>
+
+<h3>Teacher List</h3>
+<table>
+<tr><th>Name</th><th>Username</th><th>QR</th><th>Report</th></tr>
+{% for t in teachers %}
+<tr>
+<td>{{t[1]}}</td>
+<td>{{t[2]}}</td>
+<td>{{'✅' if t[4] else '❌'}}</td>
+<td>{{'✅' if t[5] else '❌'}}</td>
+</tr>
+{% endfor %}
+</table>
+<a href="/dashboard">⬅ Back</a>
+</div>
